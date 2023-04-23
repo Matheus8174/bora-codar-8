@@ -1,0 +1,377 @@
+:root {
+  --white: #FFF;
+
+  --gray: #D9D9D9;
+
+  --purple-100: #DF9780;
+  --purple-200: #A66DE9;
+  --purple-400: #CE9FFC;
+  --purple-500: #7367F0;
+
+  --black-400: #4A4556;
+  --black-500: #363447;
+  --black-600: #292738;
+  --black-700: #1E1E1E;
+
+  --cian-100: #90F7EC;
+  --cian-200: #32CCBC;
+
+  --green-100: #81FBB8;
+  --green-200: #28C76F;
+
+  --red-100: #FEB692;
+  --red-200: #EA5455;
+
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+
+  height: 100vh;
+  width: 100vw;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--black-600);
+}
+
+main.container {
+  padding: 3.2rem;
+
+  display: grid;
+  grid-template-areas:
+    "card-one card-two card-tree"
+    "footer footer footer";
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+
+  column-gap: 3.2rem;
+  row-gap: 5.9rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+
+
+  min-width: 29.6rem;
+  padding: 2.9rem 4.8rem;
+  background: var(--black-500);
+  box-shadow: 3px 4px 26px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+
+div.card:nth-of-type(1) {
+  grid-area: card-one;
+}
+
+div.card:nth-of-type(2) {
+  grid-area: card-two;
+}
+
+div.card:nth-of-type(3) {
+  grid-area: card-tree;
+}
+
+.card .title,
+.card h1 {
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+
+.card .title {
+  color: var(--green-100);
+}
+
+.card > main {
+  height: 197px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.card footer {
+  display: flex;
+  gap: 1rem;
+
+  grid-area: footer !important;
+}
+
+.card .footer-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.card.sales footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .4rem;
+}
+
+.card.sales footer p::before {
+  margin: auto ;
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+.card.sales footer p[data-color='purple']::before {
+  background: linear-gradient(
+    121.94deg,
+    var(--purple-400) 15.98%,
+    var(--purple-500) 82.85%
+  );
+}
+
+.card.sales footer p[data-color='pink']::before {
+  background: linear-gradient(
+    121.94deg,
+    var(--purple-100) 15.98%,
+    var(--purple-200) 82.85%
+  );
+}
+
+.card.sales footer p[data-color='black']::before {
+  background-color: var(--black-400);
+}
+
+/* progress bar */
+
+.progress-container{
+  display: flex;
+  padding: 50px 0;
+  border-radius: 8px;
+  row-gap: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circular-progress {
+  width: 19.7rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.circular-progress[data-color="purple"] {
+  background: conic-gradient(
+    var(--purple-500) 260deg, #D9D9D9 0deg
+  );
+}
+
+.circular-progress[data-color="pink"] {
+  background: conic-gradient(
+    var(--purple-200) 260deg, #D9D9D9 0deg
+  );
+}
+
+.circular-progress .circular-progress-inner {
+  content: "";
+  position: absolute;
+  width: 14.7rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--black-500);
+}
+
+.progress-value{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-value p {
+  font-size: 1.6rem;
+  line-height: 160%;
+  color: var(--white);
+}
+
+.progress-value p.percentage {
+  font-weight: 700;
+  font-size: 3.4rem;
+  line-height: 160%;
+}
+
+footer.card {
+  grid-area: footer;
+
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card .graphic {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  width: 52.3rem;
+  height: 18.6rem;
+}
+
+.card .graphic::before {
+  content: '';
+
+  position: absolute;
+  align-self: center;
+
+  width: 52.3rem;
+  height: 3px;
+
+  background: var(--black-400);
+  border-radius: 999px;
+}
+
+.card .graphic p {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+.card .graphic p::after {
+  content: '';
+  display: block;
+
+  z-index: 2;
+  width: 1.5rem;
+
+  background: linear-gradient(180deg, #90F7EC 0%, #32CCBC 100%);
+  border-radius: 999px;
+}
+
+.graphic span:nth-of-type(1) p::after {
+  height: 39px;
+}
+
+.graphic span:nth-of-type(2) p::after {
+  height: 115px;
+}
+
+.graphic span:nth-of-type(3) p::after {
+  height: 76px;
+}
+
+.graphic span:nth-of-type(4) p::after {
+  height: 159px;
+}
+
+.graphic span:nth-of-type(5) p::after {
+  height: 129px;
+}
+
+.graphic span:nth-of-type(6) p::after {
+  height: 120px;
+}
+
+.graphic span:nth-of-type(7) p::after {
+  height: 69px;
+}
+
+
+.sales-per-day-container h1 {
+  margin-bottom: 3.2rem;
+}
+
+.day-review-container {
+  display: flex;
+  gap: 3.2rem;
+  flex-direction: column;
+}
+
+.day-review {
+  display: flex;
+  flex-direction: column;
+
+  gap: .8rem;
+}
+
+.day-review p {
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+.day-review span {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.day-review span::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  aspect-ratio: 1;
+
+  clip-path: polygon(50% 0%, 0% 80%, 100% 80%);
+}
+
+.day-review span.up::before {
+  background: linear-gradient(
+    180deg, var(--green-100) 0%, var(--green-200) 100%
+  );
+}
+
+.day-review span.down::before {
+  background: linear-gradient(
+    180deg, var(--red-200) 0%, var(--red-100) 100%
+  );
+
+  transform: rotate(180deg);
+}
+
+/*
+  <footer class="card">
+    <div class="sales-per-day-container">
+      <h1>Vendas por dia da semana</h1>
+
+      <div class="day-review-container">
+        <div class="day-review">
+          <span>Dia com mais vendas</span>
+          <p>quarta-feira</p>
+        </div>
+
+        <div class="day-review">
+          <span>Dia com menos vendas</span>
+          <p>domingo</p>
+        </div>
+      </div>
+    </div>
+    <div class="graphic">
+
+    </div>
+  </footer>
+*/

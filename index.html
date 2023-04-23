@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <h1>NPS geral</h1>
+
+      <main>
+        <img src="./assets/smile-face.png" alt="excelente">
+        <p class="title">Excelente!</p>
+      </main>
+
+      <footer>
+        <p>NPS Score</p>
+        <span>75</span>
+      </footer>
+    </div>
+    <div class="card sales">
+      <h1>Vendas fechadas</h1>
+
+      <main>
+        <div class="progress-container">
+          <div class="circular-progress" data-color="purple">
+            <div class="circular-progress-inner"></div>
+            <div class="progress-value">
+              <p class="percentage">70%</p>
+              <p>alcançada</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div class="footer-container">
+        <footer>
+          <p data-color="black">Esperado</p>
+          <span>100</span>
+        </footer>
+
+        <footer>
+          <p data-color="purple">Alcançado</p>
+          <span>70</span>
+        </footer>
+      </div>
+    </div>
+    <div class="card sales">
+      <h1>Meta mensal</h1>
+
+      <main>
+        <div class="progress-container">
+          <div class="circular-progress" data-color="pink">
+            <div class="circular-progress-inner"></div>
+            <div class="progress-value">
+              <p class="percentage">90%</p>
+              <p>alcançada</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div class="footer-container">
+        <footer>
+          <p data-color="black">Esperado</p>
+          <span>RS 70K</span>
+        </footer>
+
+        <footer>
+          <p data-color="purple">Alcançado</p>
+          <span>RS 63K</span>
+        </footer>
+      </div>
+    </div>
+
+    <footer class="card">
+      <div class="sales-per-day-container">
+        <h1>Vendas por dia da semana</h1>
+
+        <div class="day-review-container">
+          <div class="day-review">
+            <span class="up">Dia com mais vendas</span>
+            <p>quarta-feira</p>
+          </div>
+
+          <div class="day-review">
+            <span class="down">Dia com menos vendas</span>
+            <p>domingo</p>
+          </div>
+        </div>
+      </div>
+      <div class="graphic">
+        <span>
+          <p>dom</p>
+        </span>
+        <span>
+          <p>seg</p>
+        </span>
+        <span>
+          <p>ter</p>
+        </span>
+        <span>
+          <p>qua</p>
+        </span>
+        <span>
+          <p>qui</p>
+        </span>
+        <span>
+          <p>sex</p>
+        </span>
+        <span>
+          <p>sab</p>
+        </span>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
